@@ -9,9 +9,9 @@ import datetime
 
 import pytz
 
-from utils import parse_servicereference, create_servicereference
-from utils import pseudo_unique_id_any
-from utils import SERVICE_TYPE_RADIO
+from .utils import parse_servicereference, create_servicereference
+from .utils import pseudo_unique_id_any
+from .utils import SERVICE_TYPE_RADIO
 
 #: default/fallback value for local timezone
 #: as the enigma2 API returns localised timestamps (not UTC!) one need to set
@@ -49,7 +49,7 @@ _METAMAP_ATTR_REV = {
     STOP_TIMESTAMP: 'stop_time',
 }
 
-for k, v in _METAMAP_ATTRIBUTES.items():
+for k, v in list(_METAMAP_ATTRIBUTES.items()):
     if v is not None:
         _METAMAP_ATTR_REV[v] = k
 
@@ -98,12 +98,12 @@ _META_MAP = {
     }
 }
 
-EVENT_HEADER_FMT = u'{start_time} -- {stop_time} #{item_id:06d} {service_name}'
-EVENT_HEADER_TECH_FMT = u'{start_time} -- {stop_time} #{item_id:06d} ' \
-                        u'{service_name:30} {service_reference}'
-EVENT_TITLE_FMT = u'{title}{shortinfo}'
-EVENT_BODY_FMT = u'{duration} {longinfo}'
-EVENT_PSEUDO_ID_FMT = u'PSEUDO ID: {pseudo_id}'
+EVENT_HEADER_FMT = '{start_time} -- {stop_time} #{item_id:06d} {service_name}'
+EVENT_HEADER_TECH_FMT = '{start_time} -- {stop_time} #{item_id:06d} ' \
+                        '{service_name:30} {service_reference}'
+EVENT_TITLE_FMT = '{title}{shortinfo}'
+EVENT_BODY_FMT = '{duration} {longinfo}'
+EVENT_PSEUDO_ID_FMT = 'PSEUDO ID: {pseudo_id}'
 
 
 class EEvent(dict):
@@ -256,7 +256,7 @@ class EEvent(dict):
             self._init_attributes_plain_dict()
         else:
             self._init_attributes_enigma()
-            self.longinfo = self.longinfo.replace(u"\u008a", "\n")
+            self.longinfo = self.longinfo.replace("\\u008a", "\n")
 
         psr = parse_servicereference(self.service_reference)
         self.service_reference = create_servicereference(psr)
@@ -304,4 +304,4 @@ if __name__ == '__main__':
     import doctest
 
     (FAILED, SUCCEEDED) = doctest.testmod()
-    print("[doctest] SUCCEEDED/FAILED: {:d}/{:d}".format(SUCCEEDED, FAILED))
+    print(("[doctest] SUCCEEDED/FAILED: {:d}/{:d}".format(SUCCEEDED, FAILED)))

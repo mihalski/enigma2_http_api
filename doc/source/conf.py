@@ -49,9 +49,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'enigma2_http_api'
-copyright = u'2017, doubleO8'
-author = u'doubleO8'
+project = 'enigma2_http_api'
+copyright = '2017, doubleO8'
+author = 'doubleO8'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -130,8 +130,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'enigma2_http_api.tex', u'enigma2\\_http\\_api Documentation',
-     u'doubleO8', 'manual'),
+    (master_doc, 'enigma2_http_api.tex', 'enigma2\\_http\\_api Documentation',
+     'doubleO8', 'manual'),
 ]
 
 
@@ -140,7 +140,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'enigma2_http_api', u'enigma2_http_api Documentation',
+    (master_doc, 'enigma2_http_api', 'enigma2_http_api Documentation',
      [author], 1)
 ]
 
@@ -151,7 +151,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'enigma2_http_api', u'enigma2_http_api Documentation',
+    (master_doc, 'enigma2_http_api', 'enigma2_http_api Documentation',
      author, 'enigma2_http_api', 'One line description of project.',
      'Miscellaneous'),
 ]

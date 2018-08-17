@@ -48,7 +48,7 @@ SERVICE_TYPE = {
     'OPT': SERVICE_TYPE_OPT,
 }
 
-SERVICE_TYPE_LOOKUP = {v: k for k, v in SERVICE_TYPE.iteritems()}
+SERVICE_TYPE_LOOKUP = {v: k for k, v in iter(list(SERVICE_TYPE.items()))}
 
 NS_DVB_S_ASTRA = 192 << 16  # 0x00c00000
 NS_DVB_S_HOTBIRD = 130 << 16  # 0x00820000
@@ -506,4 +506,4 @@ if __name__ == '__main__':
     import doctest
 
     (FAILED, SUCCEEDED) = doctest.testmod()
-    print("[doctest] SUCCEEDED/FAILED: {:d}/{:d}".format(SUCCEEDED, FAILED))
+    print(("[doctest] SUCCEEDED/FAILED: {:d}/{:d}".format(SUCCEEDED, FAILED)))

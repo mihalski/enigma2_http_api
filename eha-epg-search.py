@@ -45,20 +45,20 @@ class EPGSearch(Enigma2APIController):
                 # psr = parse_servicereference(item.service_reference)
                 args['service_reference'] = item.service_reference
 
-            print(fmt.format(**args))
-            print(EVENT_TITLE_FMT.format(
+            print((fmt.format(**args)))
+            print((EVENT_TITLE_FMT.format(
                 title=item.title,
                 shortinfo=(
-                    item.shortinfo and u' - {:s}'.format(
-                        item.shortinfo) or "")))
+                    item.shortinfo and ' - {:s}'.format(
+                        item.shortinfo) or ""))))
             if self.args.verbose > 0:
-                print(EVENT_BODY_FMT.format(
+                print((EVENT_BODY_FMT.format(
                     duration='{:d} mins.'.format(item.duration.seconds / 60),
-                    longinfo=item.longinfo))
-            print " "
+                    longinfo=item.longinfo)))
+            print(" ")
             if self.args.verbose > 2:
                 pprint.pprint(item)
-            print " "
+            print(" ")
 
     def _update_lookup_map(self):
         st = (SERVICE_TYPE_TV, SERVICE_TYPE_HDTV)
@@ -76,7 +76,7 @@ class EPGSearch(Enigma2APIController):
 
                 self.lookup_map[sref] = val
 
-        for key in sorted(self.lookup_map.keys(),
+        for key in sorted(list(self.lookup_map.keys()),
                           key=lambda x: normalise_servicereference(x)):
             self.log.debug("{:s}> {!r}".format(normalise_servicereference(key),
                                                self.lookup_map[key]))
@@ -114,7 +114,7 @@ class EPGSearch(Enigma2APIController):
 
         try:
             parse_servicereference(zap_to)
-        except Exception, pexc:
+        except Exception as pexc:
             self.log.error("Invalid service reference! {!r}".format(pexc))
             return False
 

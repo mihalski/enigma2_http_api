@@ -51,7 +51,7 @@ lines.append('.. rubric:: Footnotes')
 lines.append('.. [#f1] :py:class:`datetime.datetime` instances.')
 lines.append('.. [#f2] :py:class:`datetime.timedelta` instances.')
 
-print("\n".join(lines))
+print(("\n".join(lines)))
 
 with open('event_attributes_table.rst', "wb") as target:
     target.write("\n".join(lines))

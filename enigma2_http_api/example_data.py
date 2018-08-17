@@ -5,13 +5,13 @@ example_epg = {
     'begin_timestamp': 1503612900,
     'duration_sec': 3300,
     'id': 22997,
-    'longdesc': u'',
-    'shortdesc': u'Muss ich wirklich dazwischen?',
+    'longdesc': '',
+    'shortdesc': 'Muss ich wirklich dazwischen?',
 
     'sname': 'zdf_neo',
     'sref': '1:0:1:6D6E:437:66:FFFF0000:0:0:0:',
 
-    'title': u'Orange is the New Black'
+    'title': 'Orange is the New Black'
 }
 
 example_epg_ee = {
@@ -19,11 +19,11 @@ example_epg_ee = {
     '_kind': 'EEvent',
     'duration': 3300,
     'start_time': '2017-08-24 22:15:00',
-    'title': u'Orange is the New Black',
+    'title': 'Orange is the New Black',
     'item_id': 22997,
     'service_name': 'zdf_neo',
-    'longinfo': u'',
-    'shortinfo': u'Muss ich wirklich dazwischen?',
+    'longinfo': '',
+    'shortinfo': 'Muss ich wirklich dazwischen?',
     'service_reference': '1:0:1:6d6e:437:66:ffff0000:0:0:0:'
 }
 
@@ -31,7 +31,7 @@ example_timer = {
     'begin': 1503612600,
 
     'description': 'Muss ich wirklich dazwischen?',
-    'descriptionextended': u"USA 2015\x8aIn Litchfield hat sich die Machtverteilung ver\xe4ndert. Piper genie\xdft ihren Aufstieg, w\xe4hrend die Konflikte zwischen den Gangs zunehmen.\x8aPiper distanziert sich von Alex und wei\xdf nicht, was sie will. Sophia wird attackiert und kommt in Einzelhaft. W\xe4hrenddessen liegt Daya in den Wehen.\x8aDarsteller:\x8aPiper Chapman - Taylor Schilling\x8aLarry Bloom - Jason Biggs\x8aAlex Vause - Laura Prepon\x8aTasha \xa0'Taystee'\xa0 Jefferson - Danielle Brooks\x8aGalina 'Red' Reznikov - Kate Mulgrew\x8aSam Healy - Michael Harney\x8aRegie: Andrew McCarthy u.a.\x8aBuch/Autor: Jenji Kohan u.a.\x8aHD-Produktion\x8aAltersfreigabe: 16",
+    'descriptionextended': "USA 2015\x8aIn Litchfield hat sich die Machtverteilung ver\xe4ndert. Piper genie\xdft ihren Aufstieg, w\xe4hrend die Konflikte zwischen den Gangs zunehmen.\x8aPiper distanziert sich von Alex und wei\xdf nicht, was sie will. Sophia wird attackiert und kommt in Einzelhaft. W\xe4hrenddessen liegt Daya in den Wehen.\x8aDarsteller:\x8aPiper Chapman - Taylor Schilling\x8aLarry Bloom - Jason Biggs\x8aAlex Vause - Laura Prepon\x8aTasha \xa0'Taystee'\xa0 Jefferson - Danielle Brooks\x8aGalina 'Red' Reznikov - Kate Mulgrew\x8aSam Healy - Michael Harney\x8aRegie: Andrew McCarthy u.a.\x8aBuch/Autor: Jenji Kohan u.a.\x8aHD-Produktion\x8aAltersfreigabe: 16",
 
     'eit': 22997,
     'end': 1503616500,
@@ -107,7 +107,7 @@ example_timer_radio_ee = {
     'title': 'DASDING Sprechstunde',
     'item_id': 6784,
     'service_name': 'DASDING',
-    'longinfo': u'N/A',
+    'longinfo': 'N/A',
     'shortinfo': '',
     'service_reference': '1:0:2:6f37:431:a401:ffff0000:0:0:0:'
 }
